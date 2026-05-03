@@ -204,6 +204,13 @@
 		.hero-search .s-icon.teal  { color: #1ab394; }
 		.hero-search .s-icon.amber { color: #f8ac59; }
 
+		/* ══ HERO ROW ══ */
+		.hero-row { display: flex; gap: 16px; }
+		.hero-col { flex: 1; min-width: 0; }
+
+		/* ══ TILE GRID ══ */
+		.tile-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; padding: 12px 15px; }
+
 		/* ══ SECTION CARDS ══ */
 		.section-card {
 			background: #fff;
@@ -515,8 +522,8 @@
 			</div>
 
 			<!-- Hero row -->
-			<div class="row g-3 mb-3">
-				<div class="col-md-6">
+			<div class="hero-row mb-3">
+				<div class="hero-col">
 					<div class="hero-card teal">
 						<div class="hero-card-header">
 							<div class="d-flex align-items-center">
@@ -533,7 +540,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="hero-col">
 					<div class="hero-card amber">
 						<div class="hero-card-header">
 							<div class="d-flex align-items-center">
@@ -569,9 +576,9 @@
 							<i class="fas fa-chevron-up sc-toggle ms-2"></i>
 						</div>
 						<div class="section-card-body">
-							<div class="row g-2">
+							<div class="tile-grid">
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile locked">
 										<i class="fas fa-user-group tile-icon"></i>
 										<span class="tile-title">Участники МИК</span>
@@ -580,7 +587,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-rocket tile-icon"></i>
 										<span class="tile-title">Стартапы и высокотех. компании</span>
@@ -595,7 +602,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-coins tile-icon"></i>
 										<span class="tile-title">Получатели поддержки МСП</span>
@@ -610,7 +617,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-chart-bar tile-icon"></i>
 										<span class="tile-title">Мониторинг мер поддержки (ДЭПиР)</span>
@@ -625,7 +632,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-handshake tile-icon"></i>
 										<span class="tile-title">Электронные соглашения (ДепФин)</span>
@@ -641,7 +648,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile">
 										<i class="fas fa-cart-shopping tile-icon"></i>
 										<span class="tile-title">Закупки</span>
@@ -669,9 +676,9 @@
 							<i class="fas fa-chevron-up sc-toggle ms-2"></i>
 						</div>
 						<div class="section-card-body">
-							<div class="row g-2">
+							<div class="tile-grid">
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile">
 										<i class="fas fa-newspaper tile-icon"></i>
 										<span class="tile-title">Новости</span>
@@ -680,7 +687,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile">
 										<i class="fas fa-calendar-days tile-icon"></i>
 										<span class="tile-title">Мероприятия</span>
@@ -689,7 +696,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-trophy tile-icon"></i>
 										<span class="tile-title">Истории успеха</span>
@@ -704,7 +711,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-pen-to-square tile-icon"></i>
 										<span class="tile-title">Блог</span>
@@ -719,7 +726,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-envelope-open tile-icon"></i>
 										<span class="tile-title">Рассылки</span>
@@ -736,7 +743,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-file-alt tile-icon"></i>
 										<span class="tile-title">Согласование документов</span>
@@ -770,9 +777,9 @@
 							<i class="fas fa-chevron-up sc-toggle ms-2"></i>
 						</div>
 						<div class="section-card-body">
-							<div class="row g-2">
+							<div class="tile-grid">
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-medal tile-icon"></i>
 										<span class="tile-title">Лидеры цифровой трансформации</span>
@@ -789,7 +796,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-tower-broadcast tile-icon"></i>
 										<span class="tile-title">Техномаркет</span>
@@ -807,7 +814,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-industry tile-icon"></i>
 										<span class="tile-title">Инфраструктура</span>
@@ -824,7 +831,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-graduation-cap tile-icon"></i>
 										<span class="tile-title">Трудоустройство</span>
@@ -839,7 +846,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile">
 										<i class="fas fa-microscope tile-icon"></i>
 										<span class="tile-title">Площадки пилотного тестирования</span>
@@ -848,7 +855,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-inbox tile-icon"></i>
 										<span class="tile-title">Московский постамат</span>
@@ -864,7 +871,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-store tile-icon"></i>
 										<span class="tile-title">Витрина МБМ</span>
@@ -880,7 +887,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-lightbulb tile-icon"></i>
 										<span class="tile-title">Карта инновационных решений</span>
@@ -895,7 +902,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile tile-dropdown">
 										<i class="fas fa-rocket tile-icon"></i>
 										<span class="tile-title">Витрина стартапов и инвесторов</span>
@@ -928,9 +935,9 @@
 							<i class="fas fa-chevron-up sc-toggle ms-2"></i>
 						</div>
 						<div class="section-card-body">
-							<div class="row g-2">
+							<div class="tile-grid">
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile">
 										<i class="fas fa-tv tile-icon"></i>
 										<span class="tile-title">Мониторинг мер поддержки</span>
@@ -938,7 +945,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile">
 										<i class="fas fa-users tile-icon"></i>
 										<span class="tile-title">Мониторинг посетителей проектов</span>
@@ -946,7 +953,7 @@
 									</div>
 								</div>
 
-								<div class="col-2">
+								<div class="tile-col">
 									<div class="tile">
 										<i class="fas fa-map-location-dot tile-icon"></i>
 										<span class="tile-title">Аналитика по постаматам</span>
