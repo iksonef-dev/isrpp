@@ -86,12 +86,14 @@
 		.sub-nav { list-style: none; margin: 0; padding: 2px 0; display: none; background: #edf1f7; }
 		.sub-nav.open { display: block; }
 		.sub-nav li a {
-			display: block;
+			display: flex;
+			align-items: center;
 			padding: 7px 14px 7px 38px;
 			color: #5a7090;
 			text-decoration: none;
 			font-size: 12px;
 		}
+		.sub-nav li a .arrow { margin-left: auto; font-size: 9px; color: #8ca0b8; flex-shrink: 0; }
 		.sub-nav li a:hover { color: #1c3a5a; background: #e0e8f0; }
 
 		.sub-sub-nav { list-style: none; margin: 0; padding: 0; display: none; background: #e5eaf2; }
