@@ -381,7 +381,7 @@
 		</a>
 		<ul class="side-nav">
 			<li>
-				<a href="#"><span class="nav-icon"><i class="fas fa-file-check"></i></span> Заявки</a>
+				<a href="#"><span class="nav-icon"><i class="fas fa-file-alt"></i></span> Заявки</a>
 			</li>
 			<li>
 				<a href="#"><span class="nav-icon"><i class="fas fa-building"></i></span> Организации</a>
@@ -1304,14 +1304,22 @@
 		icon.classList.toggle('collapsed');
 	}
 
-	document.querySelectorAll('.side-nav .has-sub > a').forEach(function(link) {
+	document.querySelectorAll('.side-nav > li.has-sub > a').forEach(function(link) {
 		link.addEventListener('click', function(e) {
 			e.preventDefault();
 			const li = this.parentElement;
-			const sub = li.querySelector(':scope > .sub-nav');
-			if (sub) {
-				sub.classList.toggle('open');
-				li.classList.toggle('open');
+			const isOpen = li.classList.contains('open');
+			// закрыть все открытые верхнего уровня
+			document.querySelectorAll('.side-nav > li.has-sub').forEach(function(el) {
+				el.classList.remove('open');
+				const s = el.querySelector(':scope > .sub-nav');
+				if (s) s.classList.remove('open');
+			});
+			// открыть текущий, если он был закрыт
+			if (!isOpen) {
+				li.classList.add('open');
+				const sub = li.querySelector(':scope > .sub-nav');
+				if (sub) sub.classList.add('open');
 			}
 		});
 	});
